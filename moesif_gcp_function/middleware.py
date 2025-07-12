@@ -309,7 +309,7 @@ class MoesifLogger:
                 random_percentage = random.random() * 100
                 gv.sampling_percentage = gv.app_config.get_sampling_percentage(
                     event_model,
-                    gv.config,
+                    json.loads(gv.config.raw_body),
                     self.user_id,
                     self.company_id,
                 )
